@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 export interface TopMenu {
   title: string;
@@ -21,4 +21,9 @@ export class ScrollableTabComponent implements OnInit {
   selectedIndex = -1;
   title = 'PDD';
   @Input() menu: TopMenu[] = [];
+  @Output() tabSelected = new EventEmitter();
+  handleSelection(index: number) {
+    this.selectedIndex = index;
+    this.tabSelected.emit(this.menu[this.selectedIndex]);
+  }
 }

@@ -76,4 +76,8 @@ export class AppComponent {
       link: ''
     }
   ];
+
+  handleTabSelected(topMenu: TopMenu) {
+    console.log(topMenu);
+  }
 }
