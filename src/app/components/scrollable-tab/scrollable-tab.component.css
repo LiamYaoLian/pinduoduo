@@ -5,7 +5,10 @@ ul {
 }
 
 ul li {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 5px;
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/white-space#collapsing_of_white_space */
   white-space: nowrap;
@@ -22,4 +25,11 @@ a {
 
 .active {
   color: red;
+}
+
+.indicator {
+  background-color: brown;
+  height: 2px;
+  width: 3rem;
+  margin-top: 2px;
 }

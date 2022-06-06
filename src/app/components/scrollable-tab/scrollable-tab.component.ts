@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
-interface TopMenu {
+export interface TopMenu {
   title: string;
   link?: string;
 }
@@ -20,74 +20,5 @@ export class ScrollableTabComponent implements OnInit {
 
   selectedIndex = -1;
   title = 'PDD';
-  menu: TopMenu[] = [
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Men\'s',
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    },
-    {
-      title: 'Popular',
-      link: ''
-    }
-  ];
-
-  handleSelection(index: number) {
-    this.selectedIndex = index;
-  }
-
+  @Input() menu: TopMenu[] = [];
 }

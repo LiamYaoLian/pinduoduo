@@ -2,8 +2,9 @@
   <li *ngFor="let item of menu; let i = index">
     <a href="#"
        [class.active]="i === selectedIndex"
-       (click)="handleSelection(i)"
+       (click)="selectedIndex = i"
     >{{ item.title }}</a>
+    <span class="indicator" *ngIf="i === selectedIndex"></span>
   </li>
 
 </ul>
