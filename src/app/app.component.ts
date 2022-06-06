@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+interface TopMenu {
+  title: string;
+  link?: string;
+}
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pinduoduo';
 }
