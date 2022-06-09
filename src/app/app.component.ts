@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ImageSlider} from "./components";
+import {ImageSlider} from "./shared/components";
 interface TopMenu {
   title: string;
   link?: string;
